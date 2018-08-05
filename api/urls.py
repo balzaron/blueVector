@@ -1,11 +1,12 @@
 from django.conf.urls import url, include
+from django.urls import path
+
 from .views import *
-from . import views
 
 # api url
 urlpatterns = [
-    url(r'^test/$', views.GetMessageView.as_view()),
-    url(r'^product/', PartyList.as_view()),
-    url(r'^user/', UserList.as_view()),
-    url(r'^institution/', InstitutionList.as_view())
+    # path('product/', PartyList.as_view()),
+    path('user/', UserList.as_view()),
+    path('institution/', InstitutionList.as_view()),
+    path('agent/', AgentList.as_view()),
 ]
