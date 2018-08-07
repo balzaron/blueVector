@@ -11,7 +11,7 @@ from .models import *
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('name', 'phone', 'sex', 'location','identification', 'age', 'describe', 'agent_id')
+        fields = ('name', 'phone', 'sex', 'location','identification', 'age', 'describe', 'agent')
 
 
 class InstitutionSerializer(serializers.ModelSerializer):

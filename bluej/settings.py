@@ -38,8 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'django_filters',
+    # 'users',
+    # 'django.contrib.sites',
+    'oauth2_provider',
+    'corsheaders',
 ]
+
+# AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,14 +56,21 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+MIDDLEWARE_CLASSES = [
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'bluej.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,7 +164,7 @@ BOOTSTRAP3 = {
     # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap3.html)
     'javascript_in_head': False,
 
-    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 template tags)
+    # Include jQuery with Bootstrap JavaScript (affects django-bootstrap3 templates tags)
     'include_jquery': False,
 
     # Label class to use in horizontal forms
@@ -190,10 +204,18 @@ BOOTSTRAP3 = {
         'inline': 'bootstrap3.renderers.InlineFieldRenderer',
     },
 }
-# REST_FRAMEWORK = {
-#     # Use Django's standard `django.contrib.auth` permissions,
-#     # or allow read-only access for unauthenticated users.
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ]
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    # ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+}
+
+SITE_ID=2

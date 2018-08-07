@@ -16,9 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import urls as auth_urls
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/', include('api.urls')),
+    # url(r'^$', views.index, name='index'),
+    # url(r'^p/(?P<article_id>[0-9]+)/$', views.detail,name='detail'),
+    # url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]

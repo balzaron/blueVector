@@ -1,32 +1,31 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework import generics
-from django.http import JsonResponse
-from .models import *
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import viewsets
+
+from . import permissions
 from .serializers import *
 
 
-# class PartyList(generics.ListCreateAPIView, generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Product.objects.all()
-#     serializer_class = ProductSerializer
-#
-#
-# class PartyDetail(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Product.objects.all()
-#     serializer_class = ProductSerializer
-
-
-class UserList(generics.ListCreateAPIView):
+class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('name', 'phone', )
+    # permission_classes = (permissions.IsOwnerOrReadOnly,)
 
 
-class InstitutionList(generics.ListCreateAPIView):
+class InstitutionViewSet(viewsets.ModelViewSet):
     queryset = Institution.objects.all()
     serializer_class = InstitutionSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('name', )
 
 
-class AgentList(generics.ListCreateAPIView):
+class AgentViewSet(viewsets.ModelViewSet):
     queryset = Agent.objects.all()
     serializer_class = AgentSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('name', 'phone', )
+

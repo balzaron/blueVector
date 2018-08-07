@@ -12,11 +12,11 @@ class User(models.Model):
     name = models.CharField(max_length=100, default='')
     phone = models.CharField(max_length=11, default='')
     sex = models.CharField(max_length=6, choices=(('m','male'), ('f', 'female')))
-    identification = models.CharField(max_length=18)
+    identification = models.CharField(max_length=18, default='')
     age = models.IntegerField(default=20)
-    location = models.TextField(max_length=255)
+    location = models.TextField(max_length=255, default='')
     describe = models.CharField(max_length=500, default='')
-    agent = models.ForeignKey('Agent', to_field='id', default=None, on_delete=models.PROTECT)
+    agent = models.ForeignKey('Agent', to_field='id', default=None, on_delete=models.PROTECT, null=True)
 
     class Meta:
         ordering = ('created_time',)

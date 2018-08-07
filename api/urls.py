@@ -1,12 +1,16 @@
 from django.conf.urls import url, include
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 
-from .views import *
+from . import views
+
+router = DefaultRouter()
+router.register(r'user', views.UserViewSet)
+router.register(r'institution', views.InstitutionViewSet)
+router.register(r'agent', views.AgentViewSet)
 
 # api url
 urlpatterns = [
-    # path('product/', PartyList.as_view()),
-    path('user/', UserList.as_view()),
-    path('institution/', InstitutionList.as_view()),
-    path('agent/', AgentList.as_view()),
+    url(r'^', include(router.urls)),
 ]
+
+# urlpatterns = format_suffix_patterns(urlpatterns)
