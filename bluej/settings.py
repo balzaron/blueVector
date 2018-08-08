@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api.apps.ApiConfig',
     'django_filters',
-    # 'users',
+    'uesr',
     # 'django.contrib.sites',
     'oauth2_provider',
     'corsheaders',
