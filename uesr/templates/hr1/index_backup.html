@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue表单</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="../js/vue.js" type="text/javascript" charset="utf-8">
+import 'lib-flexible'
+</script>
+
+<script type="text/javascript" src="js/jquery.js">
+
+ </script>
+
+
+ <script type="text/javascript">
+function copyText()
+{
+
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 )
+{#  && xmlhttp.status==200#}
+    {
+    alert(xmlhttp.responseText);
+    }
+  }
+var json = {
+    "name": "1",
+    "phone": "1",
+    "sex": "m",
+    "location": "1",
+    "identification": "1",
+    "age": 11,
+    "describe": "1",
+    "agent": null
+};
+
+
+xmlhttp.open("POST","/api/user/");
+xmlhttp.setRequestHeader('Content-Type', 'application/json')
+
+xmlhttp.send(JSON.stringify(json))
+
+}
+</script>
+
+<style type="text/css">
+	* { margin:0; padding:0; list-style:none; font-size:14px;}
+	.fort14 {font-size:14px;}
+	.from_title {background-size: auto 100%;background-size: 100% auto;font-size:24px;text-align:center;min-height:44px;min-width: 375px;line-height:44px;}
+    .updownboder{border-top:solid 0.25px lightgray;border-bottom:0.25px solid lightgray;}
+	.centerDiv { background-size: auto 100%;background-size: 100% auto; text-align:center;}
+	.size55{min-height:44px;min-width: 375px;text-align:left;line-height:55px;font-size: 17px;}
+    .size100{min-height:44px;min-width: 375px;text-align:left;line-height:100px;font-size: 17px;}
+    .biginput{border:0px;outline:none;cursor: pointer; font-size: 18px}
+	.leftDiv { background-size: auto 100%;background-size: 100% auto; text-align:left;}
+
+   hiddenDiv { height:100%; overflow:hidden; display:inline-block; width:1px; overflow:hidden; margin-left:-1px; zoom:1; *display:inline; *margin-top:-1px; _margin-top:0; vertical-align:middle;}
+           .textarea{
+            width:350px;height:80px;position:absolute;background:none;z-index:9
+            }
+             .note{
+             position:absolute;line-height:20px;padding:3px 5px;
+             }
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+         text-align: center;
+
+}
+</style>
+</head>
+
+<body>
+<div >
+    <div class='updownboder' style="width:100%;; min-width:375px;margin:auto;" >
+
+        <div id="form_title" class="from_title updownboder">
+		个人信息
+        </div>
+
+        <div class="size55 updownboder" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" id="name">
+        名字&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <input class="biginput" placeholder="请填写姓名">
+	    </div>
+
+        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" id="iphone">
+        电话&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <input  class="biginput" placeholder="请填写电话号码">
+	    </div>
+
+        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" id="iphone">
+        性别&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <select  class="biginput" style="font-size: 16px" id="select_sex">
+                <option value=""  style="display:none" >请选择性别</option>
+                  <option value ="m">男</option>
+                  <option value="w">女</option>
+            </select>
+	    </div>
+
+        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" >
+        年龄&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+            <input  class="biginput" placeholder="请填写年龄" id="age" size="6"> 岁
+	    </div>
+
+{#        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;#}
+{#        {% load static %}#}
+{#		<img src="{% static 'mark_dot .png' %}" >#}
+{#        身份证&ensp;&ensp;&ensp;&ensp;&ensp;#}
+{#            <input  class="biginput" placeholder="请填写身份证">#}
+{#	    </div>#}
+
+        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" id="iphone">
+        现有学历&ensp;&ensp;&ensp;
+            <select  class="biginput" style="font-size: 16px">
+                 <option value=""  style="display:none" >请选择您现在学历</option>
+                  <option value ="1">无</option>
+                  <option value="2">初中毕业</option>
+                  <option value="2">高中/职高毕业</option>
+                <option value="2">中专毕业</option>
+                <option value="2">大专毕业</option>
+            </select>
+	    </div>
+
+        <div class="size55 updownboder" style="font-size: 17px" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" >
+        期望专业&ensp;
+            <input  class="biginput" placeholder="请填写期望专业">
+	    </div>
+
+        <div style="background: gray ;height: 20px;">
+        </div>
+
+
+        <div class="size55 updownboder" style="border-bottom:0px;" >&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        {% load static %}
+		<img src="{% static 'mark_dot .png' %}" >
+        备注&ensp;<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<textarea class="textarea" style="border-style:none;width:75%;resize:none"  onfocus="document.getElementById('note').style.display='none'" onblur="if(value=='')document.getElementById('note').style.display='block'"></textarea>
+        <div id="note" class="note">
+            <font color="#777">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;请填写申请理由...</font>
+        </div>
+        </div>
+        <div class="size55" style="height: 100px;">
+        </div>
+      <div  style="background: gray ;height: 5px; text-align: center;">
+        </div>
+         <div class="size55" style="background: gray ;height: 60px; text-align: center;">
+            <button class="button" onclick="copyText()">提交</button>
+
+        </div>
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+</div>
+</body>
+</html>
