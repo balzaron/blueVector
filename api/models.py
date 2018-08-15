@@ -1,6 +1,16 @@
 from django.db import models
-
+from .enums import *
 # Create your models here.
+
+
+
+class BaseModel(models.Model):
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    bDeleted = models.BooleanField(default=False, auto_created=True)
+
+    class Meta:
+        ordering = ('created_time', )
 
 
 class User(models.Model):
@@ -11,7 +21,7 @@ class User(models.Model):
 
     name = models.CharField(max_length=100, default='')
     phone = models.CharField(max_length=11, default='')
-    sex = models.CharField(max_length=6, choices=(('m','male'), ('f', 'female')))
+    sex = models.CharField(max_length=6, choices=sexes)
     identification = models.CharField(max_length=18, default='')
     age = models.IntegerField(default=20)
     location = models.TextField(max_length=255, default='')
@@ -45,6 +55,25 @@ class Agent(models.Model):
     name = models.CharField(max_length=100, default='')
     college = models.CharField(max_length=100, default='')
     phone = models.CharField(max_length=11, default='')
+
+    class Meta:
+        ordering = ('created_time', )
+
+
+class Education(models.Model):
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    bDeleted = models.BooleanField(default=False, auto_created=True)
+
+    name = models.CharField(max_length=100, default='')
+    sex = models.CharField(max_length=10, choices=sexes)
+    age = models.IntegerField(default=18)
+    identification = models.CharField(max_length=18, blank=True)
+    record = models.CharField(max_length=100, choices=edu)
+    targetCollege = models.CharField(max_length=100, choices=universities, blank=True)
+    phone = models.CharField(max_length=11)
+    professional = models.CharField(max_length=100)
+    note = models.TextField()
 
     class Meta:
         ordering = ('created_time', )

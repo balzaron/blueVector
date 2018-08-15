@@ -24,3 +24,10 @@ class AgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agent
         fields = ('name', 'college', 'phone')
+
+
+class EducationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Education
+        fields = ('name', 'sex', 'age', 'record', 'phone',
+                  'professional', 'note')

@@ -29,3 +29,9 @@ class AgentViewSet(viewsets.ModelViewSet):
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('name', 'phone', )
 
+
+class EducationViewSet(viewsets.ModelViewSet):
+    queryset = Education.objects.all()
+    serializer_class = EducationSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('name', 'phone', )
