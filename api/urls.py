@@ -8,6 +8,7 @@ router.register(r'user', views.UserViewSet)
 router.register(r'institution', views.InstitutionViewSet)
 router.register(r'agent', views.AgentViewSet)
 router.register(r'edu', views.EducationViewSet)
+router.register(r'jobs', views.JobsViewSet)
 
 # api url
 urlpatterns = [

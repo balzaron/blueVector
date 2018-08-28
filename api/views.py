@@ -35,3 +35,10 @@ class EducationViewSet(viewsets.ModelViewSet):
     serializer_class = EducationSerializer
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('name', 'phone', )
+
+
+class JobsViewSet(viewsets.ModelViewSet):
+    queryset = Jobs.objects.all()
+    serializer_class = JobsSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('title', 'salary',)

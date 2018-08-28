@@ -77,3 +77,18 @@ class Education(models.Model):
 
     class Meta:
         ordering = ('created_time', )
+
+class Jobs(models.Model):
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    bDeleted = models.BooleanField(default=False, auto_created=True)
+
+    href = models.URLField(default="http://www.lanxiangren.net")
+    img = models.URLField(default=None)
+    title = models.CharField(max_length=255)
+    salary = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    msg1 = models.CharField(max_length=10)
+    msg2 = models.CharField(max_length=10)
+    msg3 = models.CharField(max_length=10)
+

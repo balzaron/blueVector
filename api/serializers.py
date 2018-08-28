@@ -31,3 +31,8 @@ class EducationSerializer(serializers.ModelSerializer):
         model = Education
         fields = ('name', 'sex', 'age', 'record', 'phone',
                   'professional', 'note')
+
+class JobsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Jobs
+        fields = ('href', 'img', 'title', 'salary', 'name', 'msg1', 'msg2', 'msg3',)
