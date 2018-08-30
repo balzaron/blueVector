@@ -9,7 +9,7 @@ def index(req):
     return render(req,"hr1/index.html")
 
 def jobList(req):
-    return render(req,'hr1/2222.html')
+    return render(req,'hr1/222.html')
 
 def jobDetail(req):
     return render(req,'hr1/detail.html')
