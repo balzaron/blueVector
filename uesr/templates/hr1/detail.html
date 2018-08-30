@@ -2,13 +2,17 @@
 <head>
     <link rel="stylesheet" type="text/css" href="https://webapi.amap.com/theme/v1.3/style1503546983737.css">
 
+
+    {% for item in id%}
+<p id ="index" style="display: none">{{ item }}</p>
+{% endfor %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
     <title>探存科技</title>
 
-    <link rel="stylesheet" type="text/css" href="D:\liufeng\work\blueVector\uesr\static\css\main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <link rel="canonical" href="https://www.zhipin.com/job_detail/c804923a80aaeb261XB83ty9E1A~.html">
     <meta name="applicable-device" content="mobile">
 <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
@@ -17,53 +21,60 @@
         salary="salary";name="name";msg="msg"
 function skill(datas,str)
     {
+        var ddd = JSON.stringify(datas);
+        ddd = ddd.replace("\"","")
+        ddd = ddd.replace("\"","")
+        var data = ddd.split(",")
         var container =document.getElementById(str);
         var node=container.nextSibling;
         var df = document.createDocumentFragment();
-        for(var i = 0;i < datas.length;i++){
-            var d = datas[i];
+        for(var i = 0;i < data.length;i++){
+            var d = data[i];
             var oDiv = document.createElement('span');
-            oDiv.innerHTML = datas[i];
+            oDiv.innerHTML = data[i];
             df.appendChild(oDiv);
         }
         container.parentNode.insertBefore(df, node)
         node=oDiv.nextSibling;
 
     }
+function messageIn(data){
 
-    $(document).ready(function(){
-/*        $.ajax({
-            url: "/api/jobs/",//后台提供的接口
-            type: "get",   //请求方式是post
-            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
-                fname(data["results"])
-            }
-        });*/
-        data = {title:"普工",salary:"3000-5000/月",name:"干不死你公司","msg1":"上海","msg2":"40岁以下","msg3":"初中以上",
-                "time":"08月08日","skill":["市场","遛狗","吃大便"],
-            "responsibilities":" 1.准确把握公司品牌定位，进行公司品牌战略规划及相关品牌cis体系建设；\n2.为公司节目或品牌定制完整的宣传策划方案；",
-            "introduce":"本公司主营母婴服务，也就是育婴师和月嫂服务的也就是育婴师和月嫂服务的",
-            "address":"22上海普陀区武威路88弄中鑫企业广场17号",
-            "tags":["坐着上班","免费空调","有住宿"]
-        }
+
+
         skill(data["skill"],"time")
+        skill(data["tags"],"tags")
+
         document.getElementById("title").textContent=data[title]
+        alert(data[title])
         document.getElementById("salary").textContent=data[salary]
 
         document.getElementById("msg1").textContent=data["msg1"]
         document.getElementById("msg2").textContent=data["msg2"]
         document.getElementById("msg3").textContent=data["msg3"]
 
-        document.getElementById("time").textContent="发布于"+data["time"]
+        document.getElementById("time").textContent="发布于"+data["release_time"]
         document.getElementById("responsibilities").innerText=data["responsibilities"]
         document.getElementById("introduce").innerText=data["introduce"]
         document.getElementById("address").innerText=data["address"]
-        skill(data["tags"],"tags")
-
-
-
 
 }
+
+
+    $(document).ready(function(){
+        target_url="/api/jobdetail/?id="+document.getElementById("index").textContent
+
+       $.ajax({
+            url: target_url,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+                messageIn(data[0])
+
+            }
+        });
+
+}
+
         )
 </script>
 <body>
@@ -74,6 +85,7 @@ function skill(datas,str)
     </div>
     <div id="main">
         <div class="job-banner">
+
             <div class="name"><span class="salary" id="salary">15K-30K</span><a id="title" style="color:#fff;">产品经理</a></div>
             <p><a id="msg1" style="color:#fff;">上海</a>
                 <em class="vline"></em>

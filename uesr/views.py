@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django import template
+from django.shortcuts import render,render_to_response
 
 # Create your views here.
 
@@ -12,4 +13,7 @@ def jobList(req):
     return render(req,'hr1/222.html')
 
 def jobDetail(req):
-    return render(req,'hr1/detail.html')
+
+    print (req.GET)
+
+    return render(req,'hr1/detail.html',req.GET)

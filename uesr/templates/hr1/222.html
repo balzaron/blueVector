@@ -39,7 +39,7 @@
             url: "/api/jobs/",//后台提供的接口
             type: "get",   //请求方式是post
             success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
-                fname(data["results"])
+                fname(data)
             }
         });
 }
