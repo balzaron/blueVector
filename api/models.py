@@ -87,10 +87,10 @@ class Jobs(models.Model):
     img = models.URLField(default=None)
     title = models.CharField(max_length=255)
     salary = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    msg1 = models.CharField(max_length=10)
-    msg2 = models.CharField(max_length=10)
-    msg3 = models.CharField(max_length=10)
+    name = models.CharField(max_length=250)
+    msg1 = models.CharField(max_length=210)
+    msg2 = models.CharField(max_length=210)
+    msg3 = models.CharField(max_length=210)
 
 
 class JobDetail(models.Model):
@@ -100,11 +100,11 @@ class JobDetail(models.Model):
 
     title = models.CharField(max_length=255)
     salary = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    msg1 = models.CharField(max_length=10)
-    msg2 = models.CharField(max_length=10)
-    msg3 = models.CharField(max_length=10)
-    release_time = models.CharField(max_length=50)
+    name = models.CharField(max_length=250)
+    msg1 = models.CharField(max_length=210)
+    msg2 = models.CharField(max_length=210)
+    msg3 = models.CharField(max_length=210)
+    release_time = models.CharField(max_length=250)
     skill = models.CharField(max_length=255)
     responsibilities = models.CharField(max_length=255)
     introduce = models.CharField(max_length=255)
