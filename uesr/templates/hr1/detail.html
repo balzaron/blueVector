@@ -20,12 +20,14 @@
 <script>
             var ck = function(){
                 document.getElementById("dialog-ddd").style.display="inline";
+
             }
             var close1=function () {
                 document.getElementById("dialog-ddd").style.display="none";
             }
             var sub = function () {
 document.getElementById("sub_button").style.display="none";
+document.getElementById("gay").innerText="提交中请稍等"
 
                    $.ajax({
             url: "/api/user/",//后台提供的接口
@@ -48,6 +50,7 @@ document.getElementById("dialog-ddd").style.display="none";
                             },
                        error:function(msg){
                 document.getElementById("sub_button").innerText="信息错误，点击重试";
+                document.getElementById("gay").innerText="请着重检查手机号格式"
                 document.getElementById("sub_button").style.cssText = ""
 
 
@@ -213,7 +216,7 @@ function messageIn(data){
                                 <br>
                                 <div>推荐人号码（非必填）<br><input  type="text" value="" data-val="" name="title" placeholder="请输入手机号码 可不填" data-range="1,12" data-blank="请输入手机号码 可不填"  class="ipt required" id="sub_d_phone"></div>
                               <br>
-                              <p class="gray">记得填写推荐人拿返费哦</p>
+                              <p class="gray" id ="gay">记得填写推荐人拿返费哦</p>
 	                                <div class="through-btns"><span class="btn" data-download="/d/v2/?type=ck&amp;pkn=wap-chat" onclick="sub()" id="sub_button">提交</span>
                                 </p>
                             </div>
