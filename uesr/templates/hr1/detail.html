@@ -19,12 +19,12 @@
 
 <script>
             var ck = function(){
-{#                alert("222")#}
+
 {#                document.getElementById("responsibilities").style.visibility="hidden";#}
                 document.getElementById("dialog-ddd").style.display="inline";
             }
             var sub = function () {
-                alert("sub")
+
                    $.ajax({
             url: "/api/user/",//后台提供的接口
             type: "post",   //请求方式是post
@@ -40,12 +40,12 @@
     "agent": null
 }),
             success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
-                alert("1")
+
                 document.getElementById("dialog-ddd").style.display="none";
 
                             },
                        error:function(msg){
-             alert('Error:'+msg);
+
            }
                         });
 
@@ -85,7 +85,7 @@ function messageIn(data){
         skill(data["tags"],"tags")
 
         document.getElementById("title").textContent=data[title]
-        alert(data[title])
+
         document.getElementById("salary").textContent=data[salary]
 
         document.getElementById("msg1").textContent=data["msg1"]
