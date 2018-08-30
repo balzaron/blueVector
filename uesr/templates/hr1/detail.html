@@ -21,6 +21,9 @@
             var ck = function(){
                 document.getElementById("dialog-ddd").style.display="inline";
             }
+            var close1=function () {
+                document.getElementById("dialog-ddd").style.display="none";
+            }
             var sub = function () {
 document.getElementById("sub_button").style.display="none";
 
@@ -200,7 +203,7 @@ function messageIn(data){
                   <div class="dialog-container">
                       <div class="dialog-title">
                           <h3 class="title"></h3>
-                          <a href="javascript:;" class="close" ka="dialog_close"><i class="icon-close"></i></a>
+                          <a href="javascript:;" class="close" onclick="close1()"><i class="icon-close" onclick="close1()"></i></a>
                       </div>
                       <div class="dialog-con">
                           <div class="deliver-box">
