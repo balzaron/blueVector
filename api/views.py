@@ -42,3 +42,10 @@ class JobsViewSet(viewsets.ModelViewSet):
     serializer_class = JobsSerializer
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('title', 'salary',)
+
+
+class JobDetailViewSet(viewsets.ModelViewSet):
+    queryset = JobDetail.objects.all()
+    serializer_class = JobDetailSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('id',)

@@ -92,3 +92,21 @@ class Jobs(models.Model):
     msg2 = models.CharField(max_length=10)
     msg3 = models.CharField(max_length=10)
 
+
+class JobDetail(models.Model):
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    bDeleted = models.BooleanField(default=False, auto_created=True)
+
+    title = models.CharField(max_length=255)
+    salary = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    msg1 = models.CharField(max_length=10)
+    msg2 = models.CharField(max_length=10)
+    msg3 = models.CharField(max_length=10)
+    release_time = models.CharField(max_length=50)
+    skill = models.CharField(max_length=255)
+    responsibilities = models.CharField(max_length=255)
+    introduce = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    tags = models.CharField(max_length=255)
