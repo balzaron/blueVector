@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0143864-fc22-4030-9a10-5ea3f522879f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uesr/static/LOGO2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bluej.iml" afterPath="$PROJECT_DIR$/.idea/bluej.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/static/css/main.css" afterPath="$PROJECT_DIR$/uesr/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/templates/hr1/222.html" afterPath="$PROJECT_DIR$/uesr/templates/hr1/222.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/templates/hr1/detail.html" afterPath="$PROJECT_DIR$/uesr/templates/hr1/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/urls.py" afterPath="$PROJECT_DIR$/uesr/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/views.py" afterPath="$PROJECT_DIR$/uesr/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +30,22 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="219">
+              <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bluej/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bluej/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
@@ -79,27 +85,27 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="0" column="4380" lean-forward="true" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
               <folding>
-                <element signature="e#13587#13837#2" expanded="true" />
-                <element signature="e#13978#14228#2" expanded="true" />
-                <element signature="e#14348#14598#2" expanded="true" />
-                <element signature="e#14678#14928#2" expanded="true" />
-                <element signature="e#15069#15319#2" expanded="true" />
-                <element signature="e#15439#15689#2" expanded="true" />
-                <element signature="e#25156#26603#2" expanded="true" />
-                <element signature="e#26758#28202#2" expanded="true" />
+                <element signature="e#13589#13839#2" expanded="true" />
+                <element signature="e#13980#14230#2" expanded="true" />
+                <element signature="e#14350#14600#2" expanded="true" />
+                <element signature="e#14680#14930#2" expanded="true" />
+                <element signature="e#15071#15321#2" expanded="true" />
+                <element signature="e#15441#15691#2" expanded="true" />
+                <element signature="e#25158#26605#2" expanded="true" />
+                <element signature="e#26760#28204#2" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="222.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="222.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/222.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="225">
+              <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -117,13 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1200</find>
-      <find>button</find>
-      <find>copyText</find>
-      <find>xmlhttp</find>
-      <find>setRequestHeader</find>
-      <find>request.responseText</find>
-      <find>sex</find>
       <find>age</find>
       <find>defau</find>
       <find>ALLOWED</find>
@@ -147,6 +146,13 @@
       <find>LOGO2.png</find>
       <find>alert</find>
       <find>nextSibling</find>
+      <find>detail_btn_chat</find>
+      <find>dialog-ddd</find>
+      <find>e3e7e</find>
+      <find>e3e7ed</find>
+      <find>onclick</find>
+      <find>post</find>
+      <find>agent</find>
     </findStrings>
     <replaceStrings>
       <replace>user</replace>
@@ -154,6 +160,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>E:\jsjob\blueVector</dir>
+      <dir>D:\liufeng\work\blueVector</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -185,9 +192,9 @@
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/bluej/UpdateJobs.py" />
         <option value="$PROJECT_DIR$/uesr/urls.py" />
-        <option value="$PROJECT_DIR$/uesr/static/css/main.css" />
         <option value="$PROJECT_DIR$/uesr/templates/hr1/222.html" />
         <option value="$PROJECT_DIR$/uesr/views.py" />
+        <option value="$PROJECT_DIR$/uesr/static/css/main.css" />
         <option value="$PROJECT_DIR$/uesr/templates/hr1/detail.html" />
         <option value="$PROJECT_DIR$/bluej/settings.py" />
       </list>
@@ -810,12 +817,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30668128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3713034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -986,13 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bluej/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bluej/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1016,23 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uesr/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#13587#13837#2" expanded="true" />
-            <element signature="e#13978#14228#2" expanded="true" />
-            <element signature="e#14348#14598#2" expanded="true" />
-            <element signature="e#14678#14928#2" expanded="true" />
-            <element signature="e#15069#15319#2" expanded="true" />
-            <element signature="e#15439#15689#2" expanded="true" />
-            <element signature="e#25156#26603#2" expanded="true" />
-            <element signature="e#26758#28202#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/uesr/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1051,13 +1034,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/222.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uesr/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="0" column="4380" lean-forward="true" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
+          <folding>
+            <element signature="e#13589#13839#2" expanded="true" />
+            <element signature="e#13980#14230#2" expanded="true" />
+            <element signature="e#14350#14600#2" expanded="true" />
+            <element signature="e#14680#14930#2" expanded="true" />
+            <element signature="e#15071#15321#2" expanded="true" />
+            <element signature="e#15441#15691#2" expanded="true" />
+            <element signature="e#25158#26605#2" expanded="true" />
+            <element signature="e#26760#28204#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="219">
+          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#p#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bluej/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,14 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="95" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/222.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding />
         </state>
       </provider>
