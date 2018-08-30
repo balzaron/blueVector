@@ -46,6 +46,7 @@ document.getElementById("gay").innerText="提交中请稍等"
             success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
 
 document.getElementById("dialog-ddd").style.display="none";
+document.getElementById("gay").innerText="提交成功，请勿重复提交。\n 若提交信息错误，需要再次提交\n请刷新（重新进入）本页面"
 
                             },
                        error:function(msg){
