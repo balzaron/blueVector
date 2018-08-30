@@ -25,6 +25,7 @@
             }
             var sub = function () {
             document.getElementById("sub_button").setAttribute("disabled", true);
+            document.getElementById("sub_button").style.display="none";
                    $.ajax({
             url: "/api/user/",//后台提供的接口
             type: "post",   //请求方式是post
@@ -45,6 +46,8 @@ document.getElementById("dialog-ddd").style.display="none";
 
                             },
                        error:function(msg){
+                document.getElementById("sub_button").style.display="inline";
+                document.getElementById("sub_button").value="失败，重试";
 
            }
                         });
