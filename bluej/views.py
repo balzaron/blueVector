@@ -83,3 +83,7 @@ def my_login(request):
 def my_logout(request):
     auth.logout(request)
     return HttpResponseRedirect('/blog')
+
+def WX(request):
+    # return render(request,"/MP_verify_GbUQcZ9qI0T3GZMF.txt")
+    return render(request, "MP_verify_GbUQcZ9qI0T3GZMF.txt")
