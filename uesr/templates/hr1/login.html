@@ -1,0 +1,54 @@
+<html class="standard"><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="format-detection" content="email=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="copyright" content="Copyright (c) zhipin.com">
+
+  <title>探存代理管理系统</title>
+
+{#   <link href="https://static.zhipin.com/zhipin/v86/web/geek/css/main.css" type="text/css" rel="stylesheet">#}
+    <link rel="stylesheet" type="text/css" href="/static/css/h5css.css">
+
+</head>
+
+<body class="page-sign">
+<div id="wrap">
+  <div class="sign-wrap">
+    <!--短信登录-->
+    <div class="sign-form sign-sms" style="display:block;">
+      <h3 class="title">探存代理管理系统</h3>
+      <div class="tip-error"></div>
+      <div class="sign-tab"><span class="link-sms cur">账号登陆</span></div>
+      <form action="/login/phone.json" method="post"><input type="hidden" name="pk" value="cpc_user_sign_up_wap">
+        <div class="form-row row-select">
+          <span class="dropdown-select"><i class="icon-select-arrow"></i><em class="text-select">+86</em><input type="hidden" name="regionCode" value="+86"></span>
+          <span class="ipt-wrap"><i class="icon-sign-phone"></i><input type="tel" class="ipt ipt-phone required" placeholder="手机号" name="phone"></span>
+          <div class="dropdown-menu">
+
+<ul>
+  <li data-val="+86"><span class="num">+86</span>中国大陆</li>
+</ul>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <span class="ipt-wrap"><i class="icon-sign-sms"></i><input type="text" class="ipt ipt-sms required" ka="signup-sms" placeholder="密码" name="phoneCode" maxlength="6"><input type="hidden" name="smsType" value="1"></span>
+        </div>
+        <div class="form-btn">
+          <button type="submit" class="btn">登录</button>
+        </div>
+
+      </form>
+    </div>
+
+
+
+
+
+
+</div></div>
+
+</body>
+</html>
