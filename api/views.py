@@ -61,10 +61,10 @@ class LifeLogViewSet(viewsets.ModelViewSet):
 class AgentLoginView(APIView):
 
     def post(self, request):
-        user = request.data.get('name')
+        user = request.data.get('phone')
         pwd = request.data.get('password')
 
-        if Agent.objects.filter(name=user,password=pwd).first():
+        if Agent.objects.filter(phone=user,password=pwd).first():
             return Response(r"OK")
         else:
             return Response( "Failed")
