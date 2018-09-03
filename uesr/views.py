@@ -17,3 +17,6 @@ def jobDetail(req):
     print (req.GET)
 
     return render(req,'hr1/detail.html',req.GET)
+
+def login(req):
+    return render(req, 'hr1/login.html', req.GET)
