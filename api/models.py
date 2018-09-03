@@ -55,6 +55,8 @@ class Agent(models.Model):
     name = models.CharField(max_length=100, default='')
     college = models.CharField(max_length=100, default='')
     phone = models.CharField(max_length=11, default='')
+    password = models.CharField(max_length=255)
+    tags1 = models.CharField(max_length=255)
 
     class Meta:
         ordering = ('created_time', )

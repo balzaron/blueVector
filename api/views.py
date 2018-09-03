@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
 # Create your views here.
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
-
-from . import permissions
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from .serializers import *
 
 
@@ -12,7 +12,7 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('name', 'phone', 'deleted',  )
+    filter_fields = ('name', 'phone', 'deleted', )
     # permission_classes = (permissions.IsOwnerOrReadOnly,)
 
 
@@ -56,3 +56,16 @@ class LifeLogViewSet(viewsets.ModelViewSet):
     serializer_class = LifeLogSerializer
     filter_backends = (DjangoFilterBackend,)
     filter_fields = ('id', 'deleted', )
+
+
+class AgentLoginView(APIView):
+
+    def post(self, request):
+        user = request.data.get('name')
+        pwd = request.data.get('password')
+
+        if Agent.objects.filter(name=user,password=pwd).first():
+            return Response(r"OK")
+        else:
+            return Response( "Failed")
+

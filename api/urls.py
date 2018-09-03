@@ -11,10 +11,12 @@ router.register(r'edu', views.EducationViewSet)
 router.register(r'jobs', views.JobsViewSet)
 router.register(r'jobdetail', views.JobDetailViewSet)
 router.register(r'lifelog', views.LifeLogViewSet)
+# router.register(r'agent/login', views.AgentLoginView.as_view(), base_name="agent/login")
 
 # api url
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'agent/login$', views.AgentLoginView.as_view())
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)
