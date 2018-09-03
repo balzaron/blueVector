@@ -32,6 +32,7 @@ class EducationSerializer(serializers.ModelSerializer):
         fields = ('name', 'sex', 'age', 'record', 'phone',
                   'professional', 'note')
 
+
 class JobsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Jobs
@@ -41,4 +42,10 @@ class JobsSerializer(serializers.ModelSerializer):
 class JobDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = JobDetail
+        fields = '__all__'
+
+
+class LifeLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LifeLog
         fields = '__all__'

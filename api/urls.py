@@ -10,6 +10,7 @@ router.register(r'agent', views.AgentViewSet)
 router.register(r'edu', views.EducationViewSet)
 router.register(r'jobs', views.JobsViewSet)
 router.register(r'jobdetail', views.JobDetailViewSet)
+router.register(r'lifelog', views.LifeLogViewSet)
 
 # api url
 urlpatterns = [

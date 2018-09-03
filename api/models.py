@@ -7,7 +7,7 @@ from .enums import *
 class BaseModel(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     class Meta:
         ordering = ('created_time', )
@@ -17,7 +17,7 @@ class User(models.Model):
 
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     name = models.CharField(max_length=100, default='')
     phone = models.CharField(max_length=11, default='')
@@ -36,7 +36,7 @@ class Institution(models.Model):
     #, auto_created=True, db_index=True, default=1
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     name = models.CharField(max_length=100, default='')
     describe = models.CharField(max_length=500, default='')
@@ -50,7 +50,7 @@ class Institution(models.Model):
 class Agent(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     name = models.CharField(max_length=100, default='')
     college = models.CharField(max_length=100, default='')
@@ -63,7 +63,7 @@ class Agent(models.Model):
 class Education(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     name = models.CharField(max_length=100, default='')
     sex = models.CharField(max_length=10, choices=sexes)
@@ -81,7 +81,7 @@ class Education(models.Model):
 class Jobs(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     href = models.URLField(default="http://www.lanxiangren.net")
     img = models.URLField(default=None)
@@ -96,7 +96,7 @@ class Jobs(models.Model):
 class JobDetail(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
-    bDeleted = models.BooleanField(default=False, auto_created=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
 
     title = models.CharField(max_length=255)
     salary = models.CharField(max_length=50)
@@ -110,3 +110,25 @@ class JobDetail(models.Model):
     introduce = models.TextField()
     address = models.TextField()
     tags = models.TextField()
+
+
+class LifeLog(models.Model):
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    deleted = models.BooleanField(default=False, auto_created=True)
+
+    phone = models.CharField(max_length=200, blank=True)
+    name = models.CharField(max_length=100, blank=True)
+    job_id = models.IntegerField()
+    status = models.CharField(max_length=200, blank=True)
+    in_time = models.CharField(max_length=255, blank=True)
+    out_time = models.CharField(max_length=255, blank=True)
+    company_phone = models.CharField(max_length=11, blank=True, null=True)
+    agent_phone = models.CharField(max_length=11, blank=True, null=True)
+    sign_num = models.IntegerField(blank=True)
+    tags1 = models.CharField(max_length=255, blank=True)
+    tags2 = models.CharField(max_length=255, blank=True)
+    tags3 = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ('created_time', )
