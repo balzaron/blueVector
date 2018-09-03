@@ -61,7 +61,7 @@ class LifeLogViewSet(viewsets.ModelViewSet):
 class AgentLoginView(APIView):
 
     def post(self, request):
-        user = request.data.get('phone')
+        user = request.data.get('name')
         pwd = request.data.get('password')
 
         if Agent.objects.filter(phone=user,password=pwd).first():
