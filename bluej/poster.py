@@ -2,13 +2,13 @@ import time
 
 import xlrd,requests
 
-sheet = xlrd.open_workbook('./jobdetail.xlsx').sheet_by_index(0)
+sheet = xlrd.open_workbook('./jobdetail.xlsx').sheet_by_name("Sheet2")
 fields = sheet.row_values(0)
 row_num = sheet.nrows
 col_num = sheet.ncols
 
-jobs_url = "http://106.12.11.136:8000/api/jobs/"
-detail_url = "http://106.12.11.136:8000/api/jobdetail/"
+jobs_url = "http://106.12.11.136:80/api/jobs/"
+detail_url = "http://106.12.11.136:80/api/jobdetail/"
 
 
 def poster(type):
@@ -38,4 +38,5 @@ def poster(type):
 
 
 if __name__ == '__main__':
+    poster('jobs')
     poster('')
