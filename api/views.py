@@ -55,7 +55,7 @@ class LifeLogViewSet(viewsets.ModelViewSet):
     queryset = LifeLog.objects.all()
     serializer_class = LifeLogSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('id', 'deleted', )
+    filter_fields = ('id', 'deleted', 'agent_phone', )
 
 
 class AgentLoginView(APIView):
@@ -67,5 +67,5 @@ class AgentLoginView(APIView):
         if Agent.objects.filter(phone=user,password=pwd).first():
             return Response(r"OK")
         else:
-            return Response( "Failed")
+            return Response("Failed")
 
