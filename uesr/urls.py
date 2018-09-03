@@ -13,6 +13,7 @@ url(r'^jobList/$', views.jobList),
 url(r'^jobdetail/$', views.jobDetail),
 url(r'^login/$', views.login),
 url(r'^change/$', views.pw_change),
+url(r'^agentDetail/$', views.agentDetail),
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)

@@ -21,5 +21,8 @@ def jobDetail(req):
 def login(req):
     return render(req, 'hr1/login.html', req.GET)
 
-def login(req):
+def pw_change(req):
     return render(req, 'hr1/pw_change.html', req.GET)
+
+def agentDetail(req):
+    return render(req,'hr1/agent_detail.html',req.GET)
