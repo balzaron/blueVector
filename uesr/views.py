@@ -20,3 +20,6 @@ def jobDetail(req):
 
 def login(req):
     return render(req, 'hr1/login.html', req.GET)
+
+def login(req):
+    return render(req, 'hr1/pw_change.html', req.GET)
