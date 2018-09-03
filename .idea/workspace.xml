@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0143864-fc22-4030-9a10-5ea3f522879f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluej/settings.py" afterPath="$PROJECT_DIR$/bluej/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poster.py" afterPath="$PROJECT_DIR$/poster.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uesr/templates/hr1/detail.html" afterPath="$PROJECT_DIR$/uesr/templates/hr1/detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/blueVector$Unittest_poster.coverage" NAME="Unittest poster Coverage Results" MODIFIED="1535947054657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/blueVector$poster.coverage" NAME="poster Coverage Results" MODIFIED="1535696308493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/blueVector$poster__1_.coverage" NAME="poster (1) Coverage Results" MODIFIED="1535947449382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/blueVector$UpdateJobs.coverage" NAME="UpdateJobs Coverage Results" MODIFIED="1535520738064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bluej" />
     <SUITE FILE_PATH="coverage/bluej$tests.coverage" NAME="tests Coverage Results" MODIFIED="1533539384116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
   </component>
@@ -25,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="71" />
+            <state relative-caret-position="183">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,9 +46,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
               <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +54,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="0" column="4380" lean-forward="true" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
+            <state relative-caret-position="0">
+              <caret line="0" column="4380" lean-forward="false" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
               <folding />
             </state>
           </provider>
@@ -60,7 +64,7 @@
       <file leaf-file-name="h5css.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/static/css/h5css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="0">
               <caret line="0" column="868" lean-forward="false" selection-start-line="0" selection-start-column="868" selection-end-line="0" selection-end-column="868" />
               <folding />
             </state>
@@ -71,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/uesr/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
-              <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -80,8 +84,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uesr/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="325">
+              <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -89,12 +93,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bluej/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="99" column="16" lean-forward="false" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+            <state relative-caret-position="277">
+              <caret line="98" column="27" lean-forward="true" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poster.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poster.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#5dd5c8</find>
       <find>{#</find>
       <find>ctor/uesr/static/images/icons.png</find>
       <find>icons.png</find>
@@ -142,6 +157,7 @@
       <find>main.css</find>
       <find>验证码</find>
       <find>#</find>
+      <find>sub_d_phone</find>
     </findStrings>
     <replaceStrings>
       <replace>user</replace>
@@ -185,12 +201,13 @@
         <option value="$PROJECT_DIR$/bluej/templates/hr1/index.html" />
         <option value="$PROJECT_DIR$/bluej/views.py" />
         <option value="$PROJECT_DIR$/../poster.py" />
-        <option value="$PROJECT_DIR$/uesr/templates/hr1/detail.html" />
         <option value="$PROJECT_DIR$/uesr/urls.py" />
         <option value="$PROJECT_DIR$/uesr/views.py" />
         <option value="$PROJECT_DIR$/uesr/templates/hr1/login.html" />
         <option value="$PROJECT_DIR$/uesr/static/css/h5css.css" />
         <option value="$PROJECT_DIR$/bluej/settings.py" />
+        <option value="$PROJECT_DIR$/poster.py" />
+        <option value="$PROJECT_DIR$/uesr/templates/hr1/detail.html" />
       </list>
     </option>
   </component>
@@ -230,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -353,6 +369,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -402,7 +419,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.bluej">
+  <component name="RunManager" selected="Python.poster (1)">
     <configuration default="false" name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -453,6 +470,47 @@
       <module name="bluej" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../poster.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest poster" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="D:\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bluej" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/poster.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="poster" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_FUNCTION" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="poster (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bluej" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/poster.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -718,17 +776,21 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.bluej" />
       <item index="1" class="java.lang.String" itemvalue="Python.tests" />
       <item index="2" class="java.lang.String" itemvalue="Python.UpdateJobs" />
       <item index="3" class="java.lang.String" itemvalue="Python.poster" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest poster" />
+      <item index="5" class="java.lang.String" itemvalue="Python.poster (1)" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.poster" />
-        <item index="1" class="java.lang.String" itemvalue="Python.UpdateJobs" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tests" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.poster (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest poster" />
+        <item index="2" class="java.lang.String" itemvalue="Python.poster" />
+        <item index="3" class="java.lang.String" itemvalue="Python.UpdateJobs" />
+        <item index="4" class="java.lang.String" itemvalue="Python.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -791,17 +853,22 @@
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittest_poster - 2018.09.03 at 11h 57m 35s.xml">
+      <configuration name="Unittest poster" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22585838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24409871" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34011298" sideWeight="0.09281116" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2621469" sideWeight="0.09656652" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34011298" sideWeight="0.90718883" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2621469" sideWeight="0.9034335" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -827,26 +894,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda3/envs/django/lib/python3.7/site-packages/rest_framework/generics.py" />
-    <entry file="file://$PROJECT_DIR$/bluej/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bluej/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bluej/tests.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/django/lib/python3.7/site-packages/django/template/loader.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/django/lib/python3.7/site-packages/pymysql/err.py" />
@@ -989,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,9 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1075">
           <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1039,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2075">
           <caret line="87" column="62" lean-forward="false" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,33 +1093,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uesr/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uesr/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        <state relative-caret-position="325">
+          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,32 +1118,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uesr/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="0" column="4380" lean-forward="true" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
+        <state relative-caret-position="0">
+          <caret line="0" column="4380" lean-forward="false" selection-start-line="0" selection-start-column="4380" selection-end-line="0" selection-end-column="4380" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uesr/static/css/h5css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="0">
           <caret line="0" column="868" lean-forward="false" selection-start-line="0" selection-start-column="868" selection-end-line="0" selection-end-column="868" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bluej/poster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bluej/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="99" column="16" lean-forward="false" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+        <state relative-caret-position="277">
+          <caret line="98" column="27" lean-forward="true" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/nose_helper/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uesr/templates/hr1/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
