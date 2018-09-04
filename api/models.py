@@ -53,10 +53,10 @@ class Agent(models.Model):
     deleted = models.BooleanField(default=False, auto_created=True)
 
     name = models.CharField(max_length=100, default='')
-    college = models.CharField(max_length=100, default='')
+    college = models.CharField(max_length=100, default='', blank=True)
     phone = models.CharField(max_length=11, default='')
     password = models.CharField(max_length=255)
-    tags1 = models.CharField(max_length=255)
+    tags1 = models.CharField(max_length=255, blank=True)
 
     class Meta:
         ordering = ('created_time', )
