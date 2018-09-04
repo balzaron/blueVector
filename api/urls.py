@@ -15,7 +15,7 @@ router.register(r'lifelog', views.LifeLogViewSet)
 # api url
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'^test/$', views.LatestWorkerStatusView.as_view()),
+    url(r'^lateststatus/$', views.LatestWorkerStatusView.as_view()),
     url(r'agent/login$', views.AgentLoginView.as_view())
 ]
 
