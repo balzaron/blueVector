@@ -79,10 +79,14 @@ class LatestWorkerStatusView(APIView):
 
         phones = LifeLog.objects.distinct().values_list('phone', flat=True)
         phones = set(list(phones))
+        print(phones)
         l=[]
         for p in phones:
 
-            obj = LifeLog.objects.filter(agent_phone=phone, deleted=deleted, phone=p).order_by('-updated_time').first()
+            # obj = LifeLog.objects.filter(agent_phone=phone, deleted=deleted, phone=p).order_by('updated_time')
+            # print(obj)
+            obj = LifeLog.objects.filter(agent_phone=phone, deleted=deleted, phone=p).order_by('-id').first()
+
             if obj is not None:
                 l.append(obj)
         serializer = LifeLogSerializer(l, many=True)
