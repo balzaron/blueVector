@@ -39,7 +39,7 @@ function skill(datas,str)
 
 
     $(document).ready(function(){
-        target_url="/api/lifelog/?deleted=false&agent_phone="+document.getElementById("index").textContent
+        target_url="/api/lateststatus/?agent_phone="+document.getElementById("index").textContent
 
        $.ajax({
             url: target_url,//后台提供的接口
