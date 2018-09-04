@@ -1,5 +1,6 @@
+from django.forms import model_to_dict
 from django.http import JsonResponse
-
+import json
 # Create your views here.
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
@@ -69,3 +70,21 @@ class AgentLoginView(APIView):
         else:
             return Response("Failed")
 
+
+class LatestWorkerStatusView(APIView):
+
+    def get(self, request):
+        phone = request.query_params.get('agent_phone')
+        deleted = request.query_params.get('deleted') or False
+
+        phones = LifeLog.objects.distinct().values_list('phone', flat=True)
+        phones = set(list(phones))
+        l=[]
+        for p in phones:
+
+            obj = LifeLog.objects.filter(agent_phone=phone, deleted=deleted, phone=p).order_by('-updated_time').first()
+            if obj is not None:
+                l.append(obj)
+        serializer = LifeLogSerializer(l, many=True)
+
+        return Response(serializer.data)
