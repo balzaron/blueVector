@@ -29,7 +29,7 @@ class User(models.Model):
     agent = models.ForeignKey('Agent', to_field='id', default=None, on_delete=models.PROTECT, null=True)
 
     class Meta:
-        ordering = ('created_time',)
+        ordering = ('-created_time',)
 
 
 class Institution(models.Model):
@@ -44,7 +44,7 @@ class Institution(models.Model):
     bReward = models.BooleanField(default=False)
     reward = models.IntegerField(default=200)
     class Meta:
-        ordering = ('created_time',)
+        ordering = ('-created_time',)
 
 
 class Agent(models.Model):
@@ -59,7 +59,7 @@ class Agent(models.Model):
     tags1 = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ('created_time', )
+        ordering = ('-created_time', )
 
 
 class Education(models.Model):
@@ -78,7 +78,7 @@ class Education(models.Model):
     note = models.TextField()
 
     class Meta:
-        ordering = ('created_time', )
+        ordering = ('-created_time', )
 
 class Jobs(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
@@ -113,6 +113,9 @@ class JobDetail(models.Model):
     address = models.TextField()
     tags = models.TextField()
 
+    class Meta:
+        ordering = ('-created_time', )
+
 
 class LifeLog(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
@@ -133,4 +136,4 @@ class LifeLog(models.Model):
     tags3 = models.CharField(max_length=255, blank=True)
 
     class Meta:
-        ordering = ('created_time', )
+        ordering = ('-created_time', )
