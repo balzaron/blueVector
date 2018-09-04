@@ -1,6 +1,5 @@
 from django.conf.urls import url, include
 from rest_framework.routers import DefaultRouter
-
 from . import views
 
 router = DefaultRouter()
@@ -16,6 +15,7 @@ router.register(r'lifelog', views.LifeLogViewSet)
 # api url
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^test/$', views.LatestWorkerStatusView.as_view()),
     url(r'agent/login$', views.AgentLoginView.as_view())
 ]
 
