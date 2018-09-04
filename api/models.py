@@ -80,6 +80,7 @@ class Education(models.Model):
     class Meta:
         ordering = ('created_time', )
 
+
 class Jobs(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
@@ -93,6 +94,9 @@ class Jobs(models.Model):
     msg1 = models.CharField(max_length=210)
     msg2 = models.CharField(max_length=210)
     msg3 = models.CharField(max_length=210)
+
+    class Meta:
+        ordering = ('created_time',)
 
 
 class JobDetail(models.Model):
@@ -112,6 +116,9 @@ class JobDetail(models.Model):
     introduce = models.TextField()
     address = models.TextField()
     tags = models.TextField()
+
+    class Meta:
+        ordering = ('created_time', )
 
 
 class LifeLog(models.Model):
@@ -133,4 +140,4 @@ class LifeLog(models.Model):
     tags3 = models.CharField(max_length=255, blank=True)
 
     class Meta:
-        ordering = ('created_time', )
+        ordering = ('-created_time', )
