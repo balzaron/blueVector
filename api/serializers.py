@@ -23,7 +23,7 @@ class InstitutionSerializer(serializers.ModelSerializer):
 class AgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Agent
-        fields = ('name', 'college', 'phone', 'password')
+        fields = ('id','name', 'college', 'phone', 'password')
 
 
 class EducationSerializer(serializers.ModelSerializer):
