@@ -15,8 +15,8 @@
             document.getElementById("sub_button").style.display="none";
              var data_temp= JSON.stringify({
 
-        "name": document.getElementById("phone").value,
-        "college": "college",
+
+
         "phone": document.getElementById("phone").value,
                  "password":document.getElementById("password").value
 
@@ -36,6 +36,7 @@
             success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
                 if("OK"==data){
                     alert("ok")
+                    window.location.href="/user/agentDetail/?agent_phone="+document.getElementById("phone").value;
                 }
                 else {
                     document.getElementById("sub_button").style.display="inline";
