@@ -8,8 +8,8 @@ row_num = sheet.nrows
 col_num = sheet.ncols
 print(row_num,col_num)
 
-jobs_url = "http://106.12.11.136:80/api/jobs/"
-detail_url = "http://106.12.11.136:80/api/jobdetail/"
+jobs_url = "http://www.lanxiangren.net/api/jobs/"
+detail_url = "http://www.lanxiangren.net/api/jobdetail/"
 
 
 def poster(type):
@@ -35,10 +35,12 @@ def poster(type):
         if type == 'jobs':
             print ("jobs",dict)
             res = requests.post(jobs_url,dict)
+            print(res.text)
             pass
         else:
             print ("detail",dict)
             res = requests.post(detail_url, dict)
+            print(res.text)
             pass
 
 
