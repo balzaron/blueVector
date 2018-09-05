@@ -41,7 +41,8 @@ function skill(datas,str)
         }
         container.parentNode.insertBefore(df, node)
         node=oDiv.nextSibling;
-        $(document).attr('title',sum_get.toString()+"/"+sum_put.toString());
+
+        document.getElementById("d1").value="总代收/总已收:"+sum_get.toString()+"/"+sum_put.toString();
 
     }
 
@@ -69,6 +70,7 @@ function skill(datas,str)
 </head>
 
 <body class="page-sign">
+<input id ="d1" disabled="true" style="border: 0px;outline:none;cursor: pointer; font-size: 120% "size="1220px" ></input>
 <table  style="font-size: 80%">
 
 <tr id ="test" >
