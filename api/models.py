@@ -97,7 +97,7 @@ class LifeLog(BaseModel):
     out_time = models.CharField(max_length=255, blank=True)
     company_phone = models.CharField(max_length=11, blank=True, null=True)
     agent_phone = models.CharField(max_length=11, blank=True, null=True)
-    sign_num = models.IntegerField(blank=True)
+    sign_num = models.IntegerField(blank=True, null=True)
     tags1 = models.CharField(max_length=255, blank=True)
     tags2 = models.CharField(max_length=255, blank=True)
     tags3 = models.CharField(max_length=255, blank=True)
