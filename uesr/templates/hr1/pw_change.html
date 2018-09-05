@@ -4,7 +4,43 @@
     <title>修改密码</title>
      <link rel="stylesheet" type="text/css" href="/static/css/account.css">
     <script type="text/javascript" src="/static/js/w3school/jquery.js"></script>
+<script async="" ></script><script>
+        var dpr;
+        var rem;
+        var scale;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var width = docEl.clientWidth;
+        if (width > 420) {
+            width = 420;
+        }
+        dpr = window.devicePixelRatio || 1;
+        var isAndroid = window.navigator.appVersion.match(/android/gi);
+        var isIframe = (window.top != window.self);
+        if (isAndroid || isIframe) {
+            dpr = 1;
+        }
+        rem = width * dpr / 10;
+        scale = 1 / dpr;
+        metaEl.setAttribute('content', 'width=' + dpr * width + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no, viewport-fit=cover');
 
+        docEl.setAttribute('data-dpr', dpr);
+
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+
+        window.rem2px = function (v) {
+            v = parseFloat(v);
+            return v * rem;
+        };
+        window.px2rem = function (v) {
+            v = parseFloat(v);
+            return v / rem;
+        };
+
+        window.dpr = dpr;
+        </script><style>html{font-size:112.50000447034836px!important;}</style>
 
 <script type="text/javascript">
 
