@@ -89,6 +89,9 @@ class LatestWorkerStatusView(APIView):
 
             if obj is not None:
                 l.append(obj)
+        l.sort(key=lambda k: (k.get('id',0)), reverse=True)
         serializer = LifeLogSerializer(l, many=True)
-
         return Response(serializer.data)
+
+
+
