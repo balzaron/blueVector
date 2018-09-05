@@ -17,7 +17,9 @@
 
 function skill(datas,str)
     {
-
+    $(document).attr("222");
+        var sum_get = 0;
+        var sum_put = 0;
         var container =document.getElementById(str);
         var node=container.nextSibling;
         var df = document.createDocumentFragment();
@@ -32,10 +34,15 @@ function skill(datas,str)
                 +"<td>"+datas[i]["in_time"]+"</td>"
                 +"<td>"+datas[i]["out_time"]+"</td>"
                 +"<td>"+datas[i]["tags1"]+"</td>";
+                temp = datas[i]["tags1"].split("/")
+                sum_get += parseInt(temp[0])
+                sum_put += parseInt(temp[1])
             df.appendChild(oDiv);
         }
         container.parentNode.insertBefore(df, node)
         node=oDiv.nextSibling;
+        $(document).attr('title',sum_get.toString()+"/"+sum_put.toString());
+
     }
 
 
@@ -69,8 +76,8 @@ function skill(datas,str)
   <th>电话</th>
   <th>状态</th>
     <th>岗位</th>
-     <th>入厂日期</th>
-     <th>出厂日期</th>
+     <th>入日</th>
+     <th>出日</th>
     <th>已/待收</th>
 </tr>
 
