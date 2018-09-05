@@ -17,7 +17,9 @@
 
 function skill(datas,str)
     {
-
+    $(document).attr("222");
+        var sum_get = 0;
+        var sum_put = 0;
         var container =document.getElementById(str);
         var node=container.nextSibling;
         var df = document.createDocumentFragment();
@@ -25,16 +27,22 @@ function skill(datas,str)
             var d = datas[i];
             var oDiv = document.createElement('tr');
             oDiv.innerHTML =
-                "<td>"+datas[i]["name"]+"</td>"
+                "<td style='border-bottom: 1px solid #ccc!important;padding:14px;border-color: #f44336!important;' >"+datas[i]["name"]+"</td>"
                 +"<td>"+datas[i]["phone"]+"</td>"
                 +"<td>"+datas[i]["status"]+"</td>"
-                +"<td>"+datas[i]["job_id"]+"</td>"
+                +"<td>"+datas[i]["tags2"]+"</td>"
                 +"<td>"+datas[i]["in_time"]+"</td>"
-                +"<td>"+datas[i]["out_time"]+"</td>";
+                +"<td>"+datas[i]["out_time"]+"</td>"
+                +"<td>"+datas[i]["tags1"]+"</td>";
+                temp = datas[i]["tags1"].split("/")
+                sum_get += parseInt(temp[0])
+                sum_put += parseInt(temp[1])
             df.appendChild(oDiv);
         }
         container.parentNode.insertBefore(df, node)
         node=oDiv.nextSibling;
+        $(document).attr('title',sum_get.toString()+"/"+sum_put.toString());
+
     }
 
 
@@ -61,15 +69,16 @@ function skill(datas,str)
 </head>
 
 <body class="page-sign">
-<table border=1>
+<table  style="font-size: 80%">
 
-<tr id ="test">
-  <th>姓名</th>
+<tr id ="test" >
+  <th style="border-bottom: 1px solid #ccc!important;padding:14px;border-color: #f44336!important;">姓名</th>
   <th>电话</th>
   <th>状态</th>
-    <th>岗位编号</th>
-     <th>入厂日期</th>
-     <th>出厂日期</th>
+    <th>岗位</th>
+     <th>入日</th>
+     <th>出日</th>
+    <th>已/待收</th>
 </tr>
 
 </table>
