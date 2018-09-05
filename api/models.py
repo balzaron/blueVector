@@ -87,7 +87,7 @@ class JobDetail(BaseModel):
     tags = models.TextField()
 
 
-class LifeLog(models.Model):
+class LifeLog(BaseModel):
 
     phone = models.CharField(max_length=200, blank=True)
     name = models.CharField(max_length=100, blank=True)
