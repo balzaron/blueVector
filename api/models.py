@@ -41,7 +41,7 @@ class Agent(BaseModel):
 
     name = models.CharField(max_length=100, default='')
     college = models.CharField(max_length=100, default='', blank=True)
-    phone = models.CharField(max_length=11, default='')
+    phone = models.CharField(max_length=11, default='',unique=True)
     password = models.CharField(max_length=255)
     tags1 = models.CharField(max_length=255, blank=True)
 
