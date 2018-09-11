@@ -69,6 +69,9 @@ class Jobs(BaseModel):
     msg1 = models.CharField(max_length=210)
     msg2 = models.CharField(max_length=210)
     msg3 = models.CharField(max_length=210)
+    label = models.CharField(max_length=200)
+    tags1 = models.CharField(max_length=255)
+    tags2 = models.CharField(max_length=255)
 
 
 class JobDetail(BaseModel):

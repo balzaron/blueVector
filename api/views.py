@@ -42,7 +42,7 @@ class JobsViewSet(viewsets.ModelViewSet):
     queryset = Jobs.objects.all()
     serializer_class = JobsSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_fields = ('title', 'salary', 'deleted', )
+    filter_fields = ('title', 'salary', 'deleted','label' )
 
 
 class JobDetailViewSet(viewsets.ModelViewSet):
