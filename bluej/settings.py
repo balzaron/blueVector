@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # 'django.contrib.sites',
     'oauth2_provider',
     'corsheaders',
+    'trainning',
+    'education',
 ]
 
 # AUTH_USER_MODEL = 'users.User'

@@ -24,7 +24,9 @@ urlpatterns = [
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/', include('api.urls')),
     path('user/', include('uesr.urls')),
-    url(r'MP_verify_GbUQcZ9qI0T3GZMF.txt',views.WX)
+    url(r'MP_verify_GbUQcZ9qI0T3GZMF.txt',views.WX),
+    path('train/', include('trainning.urls')),
+    path('edu/', include('education.urls')),
     # url(r'^$', views.index, name='index'),
     # url(r'^p/(?P<article_id>[0-9]+)/$', views.detail,name='detail'),
     # url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
