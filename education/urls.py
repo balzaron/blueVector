@@ -13,5 +13,12 @@ router.register(r'lifelog', views.LifeLogViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^lateststatus/$', views.LatestWorkerStatusView.as_view()),
-    url(r'^agent/login$', views.AgentLoginView.as_view())
+    url(r'^agent/login$', views.AgentLoginView.as_view()),
+    url(r'^jobs/$', views.index, name="jobs"),
+    url(r'^jobList/$', views.jobList),
+    url(r'^jobDetail/$', views.jobDetail),
+    url(r'^login/$', views.login),
+    url(r'^change/$', views.pw_change),
+    url(r'^agentDetail/$', views.agentDetail),
+
 ]

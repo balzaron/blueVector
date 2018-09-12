@@ -1,0 +1,232 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://webapi.amap.com/theme/v1.3/style1503546983737.css">
+
+
+    {% for item in id%}
+<p id ="index" style="display: none">{{ item }}</p>
+{% endfor %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>探存</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="canonical" href="https://www.zhipin.com/job_detail/c804923a80aaeb261XB83ty9E1A~.html">
+    <meta name="applicable-device" content="mobile">
+<script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+
+<script>
+            var ck = function(){
+                document.getElementById("dialog-ddd").style.display="inline";
+
+            }
+            var close1=function () {
+                document.getElementById("dialog-ddd").style.display="none";
+            }
+            var sub = function () {
+document.getElementById("sub_button").style.display="none";
+document.getElementById("gay").innerText="提交中请稍等"
+    var dd = document.getElementById("sub_d_phone").value
+                var data_temp= JSON.stringify({
+
+        "phone": document.getElementById("sub_phone").value,
+        "name": document.getElementById("sub_name").value,
+        "job_id":  parseInt(document.getElementById("index").textContent),
+        "status": "在途",
+        "company_phone": "com-phone",
+                 "deleted": false,
+        "agent_phone": dd,
+        "sign_num": 0, "in_time": "",
+        "out_time": "",
+        "tags1": "0/0",
+        "tags2": "",
+        "tags3": ""
+})
+    if(document.getElementById("sub_d_phone").value==""){dd="99"}
+                   $.ajax({
+            url: "/train/lifelog/",//后台提供的接口
+            type: "post",   //请求方式是post
+             contentType: "application/json",
+             data :data_temp,
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+
+document.getElementById("dialog-ddd").style.display="none";
+document.getElementById("gay").innerText="提交成功，请勿重复提交。\n 若提交信息错误，需要再次提交\n请刷新（重新进入）本页面"
+
+                            },
+                       error:function(msg){
+                document.getElementById("sub_button").innerText="信息错误，点击重试";
+                document.getElementById("gay").innerText="请着重检查手机号格式"
+                document.getElementById("sub_button").style.cssText = ""
+           }
+                        });
+            }
+</script>
+
+<script type="text/javascript">
+            href = "href";img ="img";title="title"
+        salary="salary";name="name";msg="msg"
+
+function skill(datas,str)
+    {
+        var ddd = JSON.stringify(datas);
+        ddd = ddd.replace("\"","")
+        ddd = ddd.replace("\"","")
+        var data = ddd.split(",")
+        var container =document.getElementById(str);
+        var node=container.nextSibling;
+        var df = document.createDocumentFragment();
+        for(var i = 0;i < data.length;i++){
+            var d = data[i];
+            var oDiv = document.createElement('span');
+            oDiv.innerHTML = data[i];
+            df.appendChild(oDiv);
+        }
+        container.parentNode.insertBefore(df, node)
+        node=oDiv.nextSibling;
+
+    }
+
+function messageIn(data){
+
+
+
+        skill(data["skill"],"time")
+        skill(data["tags"],"tags")
+
+        document.getElementById("title").textContent=data[title]
+
+        document.getElementById("salary").textContent=data[salary]
+
+        document.getElementById("msg1").textContent=data["msg1"]
+        document.getElementById("msg2").textContent=data["msg2"]
+        document.getElementById("msg3").textContent=data["msg3"]
+
+        document.getElementById("time").textContent="发布于"+data["release_time"]
+        document.getElementById("responsibilities").innerText=data["responsibilities"]
+        document.getElementById("introduce").innerText=data["introduce"]
+        document.getElementById("address").innerText=data["address"]
+
+}
+
+
+    $(document).ready(function(){
+        target_url="/train/jobdetail/?id="+document.getElementById("index").textContent
+
+       $.ajax({
+            url: target_url,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+                messageIn(data[0])
+
+            }
+        });
+
+}
+
+        )
+</script>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1 class="logo" ><a image=""></a></h1>
+
+    </div>
+    <div id="main">
+        <div class="job-banner">
+
+            <div class="name"><span class="salary" id="salary">15K-30K</span><a id="title" style="color:#fff;">--</a></div>
+            <p><a id="msg1" style="color:#fff;">--</a>
+                <em class="vline"></em>
+                <a id="msg2" style="color:#fff;">--</a>
+                <em class="vline"></em>
+                <a id="msg3" style="color:#fff;">--</a>
+
+            </id>
+            <div class="job-tags"><span class="time" style="color:#fff;" id="time">--</span>
+                    
+
+                    
+                
+            </div>
+        </div>
+        <div class="job-author">
+            <div class="figure">
+            <img  alt=""></div>
+            
+          <div class="info-primary">
+                
+                <a href="javascript:;" class="btn btn-chat" data-url="/gchat/addRelation.json?jobId=c804923a80aaeb261XB83ty9E1A~&amp;lid=" redirect-url="/geek/new/index/chat?id=36716749&amp;lid=" data-lid="" data-improve="/geek/complete/base.html" data-jobid="c804923a80aaeb261XB83ty9E1A~" onclick="ck()">立即报名</a>
+
+           </div>
+        </div>
+        <div class="job-detail">
+            <div class="detail-content">
+                <div class="job-sec">
+                    <h3>课程描述</h3>
+                    <div class="text" id="responsibilities">
+
+                    </div>
+                </div>
+
+                            <div class="job-sec">
+                                <h3>课程介绍</h3>
+                                <div class="text" id="introduce">
+
+                                    
+                                </div>
+                                <div class="tags">
+                                        <p class="tags" id ="tags">
+
+                                        </p>
+                                </div>
+                            </div>
+                        
+                        
+                        
+
+                        
+                        
+                            
+                        
+                        <div class="job-sec">
+                            <h3>教学地址</h3>
+                            <div class="job-location">
+                                <div class="location-address" id="address"></div>
+                                                           </div>
+                        </div>
+                    
+                
+            </div>
+            
+                
+              <div class="dialog-wrap" id="dialog-ddd" style="display: none">
+                  <div class="dialog-layer">
+
+                  </div>
+                  <div class="dialog-container">
+                      <div class="dialog-title">
+                          <h3 class="title"></h3>
+                          <a href="javascript:;" class="close" onclick="close1()"><i class="icon-close" onclick="close1()"></i></a>
+                      </div>
+                      <div class="dialog-con">
+                          <div class="deliver-box">
+                              <div> 姓名<br><input  type="text" value="" data-val="" name="title" placeholder="请输入姓名" data-range="1,12" data-blank="请输入姓名" data-format="请输入1-12个汉字" class="ipt required" id="sub_name"></div>
+                              <br>
+                              <div>电话<br><input  type="text" value="" data-val="" name="title" placeholder="请输入手机号码" data-range="1,12" data-blank="请输入手机号码"  class="ipt required" id="sub_phone"></div>
+                                <br>
+                                <div>推荐人号码（非必填）<br><input  type="text" value="" data-val="" name="title" placeholder="请输入手机号码 可不填" data-range="1,12" data-blank="请输入手机号码 可不填"  class="ipt required" id="sub_d_phone"></div>
+                              <br>
+                              <p class="gray" id ="gay">记得填写推荐人拿返费哦</p>
+	                                <div class="through-btns"><span class="btn" data-download="/d/v2/?type=ck&amp;pkn=wap-chat" onclick="sub()" id="sub_button">提交</span>
+                                </p>
+                            </div>
+                      </div>
+                  </div>
+              </div>
+                
+            
+            
+           

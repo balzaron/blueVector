@@ -1,0 +1,146 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>学历提升服务</title>
+      <link rel="shortcut icon" type="image/x-icon" href="http://www.lanxiangren.net/logo/text2.png">
+    <link rel="apple-touch-icon-precomposed" href="http://www.lanxiangren.net/logo/text2.png">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <meta name="applicable-device" content="mobile">
+</head>
+<style type="text/css">
+
+.job-tab {
+    line-height: 43px;
+    border-bottom: 2px #f2f2f5 solid;
+    padding: 0 30px;
+}
+.job-tab a {
+    display: inline-block;
+    margin-right: 36px;
+    font-size: 15px;
+    color: #9fa3b0;
+    border-bottom: 2px transparent solid;
+    position: relative;
+    margin-bottom: -2px;
+}
+.job-tab a.cur {
+    color: #6395C5;
+    border-bottom-color: #6395C5;
+}
+</style>
+<script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+<script type="text/javascript">
+            href = "href";img ="img";title="title"
+        salary="salary";name="name";msg="msg"
+    function fname(datas)
+    { 
+        var container =document.getElementById('fff');
+        var node=container.nextSibling;
+        var df = document.createDocumentFragment();
+        for(var i = 0;i < datas.length;i++){
+            var d = datas[i];
+            var oDiv = document.createElement('li');
+            oDiv.innerHTML = "<li class='item' ><a href='"+d[href]+
+            "' ka='job_list_11' data-itemid='11' data-lid='12JnUn2xHwy.search' data-index='11'><img src='"+
+            d[img]+"'><div class='text'><div class='title'><h4>"+d[title]+"</h4><span class='salary'>"+
+            d[salary]+"</span></div><div class='name'>"+d[name]+"</div><div class='msg'><em>"+
+            d["msg1"]+"</em><em>"+d["msg2"]+"</em><em>"+d["msg3"]+"</em></div></div></a></li>";
+            df.appendChild(oDiv);
+        }
+        container.parentNode.insertBefore(df, node)
+        node=oDiv.nextSibling;
+
+    }
+function GetUrlRelativePath()
+　　{
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+　　　　if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}
+　　　　return relUrl;
+　　}
+
+
+    $(document).ready(function(){
+        path = document.location["pathname"]+document.location["search"]
+        path=path.replace("user","edu")
+        path=path.replace("jobList","jobs")
+        if(path.search("=Z") != -1){
+            document.getElementById("job_Z").className="cur"
+            document.getElementById("job_all").className=""
+            document.getElementById("job_B").className=""
+        }
+        if(path.search("=B") != -1){
+            document.getElementById("job_B").className="cur"
+            document.getElementById("job_all").className=""
+            document.getElementById("job_Z").className=""
+        }
+
+        $.ajax({
+            url: path,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+                fname(data)
+            }
+        });
+}
+        )
+</script>
+
+<body>
+
+<div id="wrap">
+<div id="header">
+
+    </div>
+    <div id="header">
+        <div class="serach-bar">
+            <div class="top-search">
+                <form action="/job_detail/" method="get">
+                    <input name="city" value="101020100" type="hidden">
+                    <input name="source" value="10" type="hidden">
+                    
+                </form>
+                
+    <div id="main">
+         <div class="job-tab" data-filter="" data-keyword="" data-l3code="110302" data-rescount="621" data-page="1" data-source="2">
+                    <a href="/edu/jobList/" class="cur" ka="recommend-job-list" id ="job_all">全部服务</a>
+             <a href="/edu/jobList/?label=Z" ka="new-job-list" id="job_Z">专科学历</a>
+             <a href="/edu/jobList/?label=B" ka="new-job-list" id="job_B">本科学历</a>
+                </div>
+                <div class="job-list" data-filter="" data-keyword="Java" data-l3code="100101" data-rescount="0" data-page="1" data-source="">
+
+
+                    <ul id = "ddd">
+                        <li id ="fff"></li>
+
+
+
+                    
+                    </ul>
+
+                    <div class="loadmore" data-url="/mobile/jobs.json" ka="more-jobs" data-page="1" data-hasmore="true">更多岗位 随时更新</div>
+                </div>
+            
+            
+        
+        
+    </div>
+    
+</div>
+
+
+
+<input type="hidden" id="page_key_name" value="m_job_list">
+
+
+
+</body></html>

@@ -1,0 +1,175 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>修改密码</title>
+     <link rel="stylesheet" type="text/css" href="/static/css/account.css">
+    <script type="text/javascript" src="/static/js/w3school/jquery.js"></script>
+<script async="" ></script><script>
+        var dpr;
+        var rem;
+        var scale;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        var width = docEl.clientWidth;
+        if (width > 420) {
+            width = 420;
+        }
+        dpr = window.devicePixelRatio || 1;
+        var isAndroid = window.navigator.appVersion.match(/android/gi);
+        var isIframe = (window.top != window.self);
+        if (isAndroid || isIframe) {
+            dpr = 1;
+        }
+        rem = width * dpr / 10;
+        scale = 1 / dpr;
+        metaEl.setAttribute('content', 'width=' + dpr * width + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no, viewport-fit=cover');
+
+        docEl.setAttribute('data-dpr', dpr);
+
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+
+        window.rem2px = function (v) {
+            v = parseFloat(v);
+            return v * rem;
+        };
+        window.px2rem = function (v) {
+            v = parseFloat(v);
+            return v / rem;
+        };
+
+        window.dpr = dpr;
+        </script><style>html{font-size:112.50000447034836px!important;}</style>
+
+<script type="text/javascript">
+
+
+
+    var id ="";
+    var password="";
+    var name="";
+    var phone="";
+    $(document).ready(function(){
+
+        target_url="/api/agent/?phone="+document.getElementById("index").textContent
+
+       $.ajax({
+            url: target_url,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+
+                id = data[0]["id"]
+                password = data[0]["password"]
+                name = data[0]["name"]
+                phone = data[0]["phone"]
+                alert(password)
+            }
+        });
+
+}        )
+    function change_password() {
+        target_url="/api/agent/?phone="+document.getElementById("index").value
+         $.ajax({
+            url: target_url,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+
+                id = data[0]["id"]
+                password = data[0]["password"]
+                name = data[0]["name"]
+                phone = data[0]["phone"]
+                alert(password)
+            }
+        });
+         alert(id)
+
+        if(password == document.getElementById("oldPassword").value){
+            if(document.getElementById("newPassword").value != ""){
+                if(document.getElementById("newPassword").value == document.getElementById("newPassword2").value ){
+                $.ajax({
+            url: "/api/agent/"+id+"/",//后台提供的接口
+            type: "put",   //请求方式是post
+            dataType:"json",
+            data :{
+                "password":document.getElementById("newPassword").value,
+                "name": name,
+                "phone": phone,
+                 '_method':"PUT"
+             },
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+                window.location.href="/user/login/"
+            },
+error:function(msg){
+                alert(msg)
+           }
+        });
+
+          }
+          else {
+              document.getElementById("chang_button").innerText="两次密码不一致，重试";
+          }
+            }
+
+        }
+        else {
+            document.getElementById("chang_button").innerText="旧密码错误，重试";
+        }
+
+    }
+
+
+</script>
+</head>
+
+<body class="page-account">
+<div id="wrap">
+    <div id="main">
+        <div id="container">
+            <div class="account-container">
+                <div class="set-nav">
+                    <ul>
+
+                        <li ka="account_pwd"  class="cur">变更密码</li>
+                        
+                    </ul>
+                </div>
+                <div class="set-content">
+{#                    <form class="account-form password-form">#}
+
+    <div class="form-row">
+        <div class="t">用户名</div>
+       <div class="c">
+                <span class="ipt-wrap"><input  name="oldPassword" id="index" class="ipt required" placeholder="请输入手机号"></span>
+            </div>
+    </div>
+
+        <div class="form-row">
+            <div class="t">旧密码</div>
+            <div class="c">
+                <span class="ipt-wrap"><input type="password" name="oldPassword" id="oldPassword" class="ipt required" placeholder="请输入旧密码"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="t">新密码</div>
+            <div class="c">
+                <span class="ipt-wrap"><input type="password" name="newPassword" id="newPassword"class="ipt required" placeholder="请输入新密码"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="t">确定新密码</div>
+            <div class="c">
+                <span class="ipt-wrap"><input type="password" id= "newPassword2" class="ipt ipt-repassword required"placeholder="请再输入一次新密码"></span>
+            </div>
+        </div>
+        <div class="form-btn">
+            <div class="btns"><button    class="btn" id="chang_button" onclick="change_password()">修改密码</button></div>
+        </div>
+</form></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body></html>
