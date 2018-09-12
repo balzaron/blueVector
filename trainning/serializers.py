@@ -27,7 +27,7 @@ class JobsSerializer(serializers.ModelSerializer):
 
 class JobDetailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Course
+        model = CourseDetail
         fields = '__all__'
 
 
