@@ -84,3 +84,32 @@ class LatestWorkerStatusView(APIView):
         l.sort(key=lambda k: (k.id), reverse=True)
         serializer = LifeLogSerializer(l, many=True)
         return Response(serializer.data)
+
+from django.shortcuts import render
+from django import template
+from django.shortcuts import render,render_to_response
+
+# Create your views here.
+
+from django.http import HttpResponse
+from django.shortcuts import render
+def index(req):
+    return render(req,"train/index.html")
+
+def jobList(req):
+    return render(req,'train/222.html')
+
+def jobDetail(req):
+
+    print (req.GET)
+
+    return render(req,'train/detail.html',req.GET)
+
+def login(req):
+    return render(req, 'train/login.html', req.GET)
+
+def pw_change(req):
+    return render(req, 'train/change.html', req.GET)
+
+def agentDetail(req):
+    return render(req,'train/agent_detail.html',req.GET)

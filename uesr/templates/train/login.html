@@ -1,0 +1,103 @@
+<html class="standard"><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="format-detection" content="email=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="copyright" content="Copyright (c) zhipin.com">
+
+  <title>探存代理管理系统</title>
+
+<script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/h5css.css">
+    <script>
+        function fun(obj){
+    obj.value = "";
+    obj.type = "password";
+}
+
+        function  login() {
+            document.getElementById("sub_button").style.display="none";
+             var data_temp= JSON.stringify({
+
+
+
+        "phone": document.getElementById("phone").value,
+                 "password":document.getElementById("password").value
+
+             })
+             $.ajax({
+            url: "/api/agent/login",//后台提供的接口
+            type: "post",   //请求方式是post
+             contentType: "application/json",
+             data :JSON.stringify({
+
+        "name": document.getElementById("phone").value,
+        "college": "college",
+        "phone": document.getElementById("phone").value,
+                 "password":document.getElementById("password").value
+
+             }),
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+                if("OK"==data){
+                    window.location.href="/user/agentDetail/?agent_phone="+document.getElementById("phone").value;
+                }
+                else {
+                    document.getElementById("sub_button").style.display="inline";
+                    document.getElementById("sub_button").innerText="用户名/密码错误，重试";
+
+                }
+                            },
+                       error:function(msg){
+                                    document.getElementById("sub_button").style.display="inline";
+                    document.getElementById("sub_button").innerText="用户名/密码错误，重试";
+
+           }
+        });
+
+        }
+
+    </script>
+
+
+</head>
+
+<body class="page-sign">
+<div id="wrap">
+  <div class="sign-wrap">
+    <!--短信登录-->
+    <div class="sign-form sign-sms" style="display:block;">
+      <h3 class="title">探存代理管理系统</h3>
+      <div class="tip-error"></div>
+      <div class="sign-tab"><span class="link-sms cur">账号登陆</span></div>
+      <input type="hidden" name="pk" value="cpc_user_sign_up_wap">
+        <div class="form-row row-select">
+          <span class="dropdown-select"><i class="icon-select-arrow"></i><em class="text-select">+86</em><input type="hidden" name="regionCode" value="+86"></span>
+          <span class="ipt-wrap"><i class="icon-sign-phone"></i><input type="tel" class="ipt ipt-phone required" placeholder="手机号" name="phone" id="phone"></span>
+          <div class="dropdown-menu">
+
+<ul>
+  <li data-val="+86"><span class="num">+86</span>中国大陆</li>
+</ul>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <span class="ipt-wrap"><i class="icon-sign-sms"></i><input type="text" class="ipt ipt-sms required" ka="signup-sms" placeholder="密码" name="phoneCode" maxlength="6" id = "password" onclick="fun(this)"><input type="hidden" name="smsType" value="1" ></span>
+        </div>
+        <div class="form-btn">
+          <button class="btn" onclick="login()" id ="sub_button">登录</button>
+        </div>
+
+      </form>
+    </div>
+
+
+
+
+
+
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html class="standard"><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="format-detection" content="email=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="copyright" content="Copyright (c) zhipin.com">
+
+  <title>探存代理管理系统</title>
+    {% for item in agent_phone%}
+<p id ="index" style="display: none">{{ item }}</p>
+{% endfor %}
+<script type="text/javascript" src="/static/js/w3school/jquery.js"></script>
+
+
+<script type="text/javascript">
+
+function skill(datas,str)
+    {
+    $(document).attr("222");
+        var sum_get = 0;
+        var sum_put = 0;
+        var container =document.getElementById(str);
+        var node=container.nextSibling;
+        var df = document.createDocumentFragment();
+        for(var i = 0;i < datas.length;i++){
+            var d = datas[i];
+            var oDiv = document.createElement('tr');
+            oDiv.innerHTML =
+                "<td style='border-bottom: 1px solid #ccc!important;padding:14px;border-color: #f44336!important;' >"+datas[i]["name"]+"</td>"
+                +"<td>"+datas[i]["phone"]+"</td>"
+                +"<td>"+datas[i]["status"]+"</td>"
+                +"<td>"+datas[i]["tags2"]+"</td>"
+                +"<td>"+datas[i]["in_time"]+"</td>"
+                +"<td>"+datas[i]["out_time"]+"</td>"
+                +"<td>"+datas[i]["tags1"]+"</td>";
+                temp = datas[i]["tags1"].split("/")
+                sum_get += parseInt(temp[0])
+                sum_put += parseInt(temp[1])
+            df.appendChild(oDiv);
+        }
+        container.parentNode.insertBefore(df, node)
+        node=oDiv.nextSibling;
+
+        document.getElementById("d1").value="总待收/总已收:"+sum_get.toString()+"/"+sum_put.toString();
+
+    }
+
+
+    $(document).ready(function(){
+        target_url="/api/lateststatus/?agent_phone="+document.getElementById("index").textContent
+
+       $.ajax({
+            url: target_url,//后台提供的接口
+            type: "get",   //请求方式是post
+            success: function (data) {   //成功时返回的data值，注意这个data是后台返回的值，上面的data是你要传给后台的值
+
+            skill(data,"test")
+
+
+            }
+        });
+
+}
+
+        )
+</script>
+
+
+</head>
+
+<body class="page-sign">
+<input id ="d1" disabled="true" style="border: 0px;outline:none;cursor: pointer; font-size: 120% "size="1220px" ></input>
+<table  style="font-size: 80%">
+
+<tr id ="test" >
+  <th style="border-bottom: 1px solid #ccc!important;padding:14px;border-color: #f44336!important;">姓名</th>
+  <th>电话</th>
+  <th>状态</th>
+    <th>岗位</th>
+     <th>入日</th>
+     <th>出日</th>
+    <th>已/待收</th>
+</tr>
+
+</table>
+</body>
+</html>
