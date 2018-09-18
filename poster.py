@@ -6,6 +6,7 @@ wb = xlrd.open_workbook('./jobdetail.xlsx')
 
 
 sheet_jobs = wb.sheet_by_name('Sheet2')
+sheet_jobs_add = wb.sheet_by_name('jobadd')
 sheet_train = wb.sheet_by_name('train')
 fields = sheet_jobs.row_values(0)
 print(fields)
@@ -33,15 +34,15 @@ def poster(sheet, type, urls):
             else:
                 dict.setdefault(fields[j], sheet.cell(i,j).value)
             if type == types[0]:
-                dict.setdefault('href', urls[1] + '?id=%d'%i)
+                dict.setdefault('href', urls[1] + '?id=%d'%(i+18))
             if type == types[0] and j == 7:
                 break
 
         res = None
         if type == types[0]:
             print ("overview",dict)
-            res = requests.post(urls[0],dict)
-            print(res.text)
+            # res = requests.post(urls[0],dict)
+            # print(res.text)
             pass
         else:
             print ("detail",dict)
@@ -58,7 +59,7 @@ def mysql():
     cur.execute('truncate table trainning_coursedetail;')
 
 if __name__ == '__main__':
-    mysql()
+    # mysql()
     for i in types:
-        poster(sheet_train, i, train_urls)
-        poster(sheet_jobs, i, jobs_urls)
+        # poster(sheet_train, i, train_urls)
+        poster(sheet_jobs_add, i, jobs_urls)
