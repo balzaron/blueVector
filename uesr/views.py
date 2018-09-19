@@ -26,3 +26,6 @@ def pw_change(req):
 
 def agentDetail(req):
     return render(req,'hr1/agent_detail.html',req.GET)
+
+def shanghai(req):
+    return render(req,'hr1/2.html',req.GET)
